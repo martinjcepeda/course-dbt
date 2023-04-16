@@ -19,5 +19,28 @@ sources:
       - name: addresses 
         loaded_at_field: created_at
         description: >
-          addresses of customers 
-     
+          addresses of customers, along with zipcode, state, and country
+      - name: users 
+        loaded_at_field: created_at
+        description: >
+          name and contact infromation of users 
+      - name: promos 
+        loaded_at_field: created_at
+        description: >
+          promos table with discount and status 
+      - name: products 
+        loaded_at_field: created_at
+        description: >
+          name, price, and inventory of products
+      - name: orders 
+        loaded_at_field: created_at
+        description: >
+          detailed order information from users 
+      - name: order_items 
+        loaded_at_field: created_at
+        description: >
+          products ordered and their quantity ordered 
+      - name: events 
+        loaded_at_field: created_at
+        description: >
+          events from user browsing sessions 

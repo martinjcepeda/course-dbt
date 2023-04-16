@@ -8,6 +8,6 @@ SELECT
     address_id
     , address
     , zipcode
-    , state
+    , state 
     , country
 FROM {{ source('postgres', 'addresses') }}
