@@ -13,6 +13,7 @@ from DEV_DB.DBT_MCEPEDAINSTAWORKCOM.USERS
 #### 2. On average, how many orders do we receive per hour? 
 7.52 orders per hour 
 
+```
 select
   AVG(order_id)
 from
@@ -27,6 +28,7 @@ from
     order by
       DATE_TRUNC (hour, created_at)
   ) 
+```
 
 #### 3. On average, how long does an order take from being placed to being delivered? 
 
@@ -78,7 +80,7 @@ ORDER BY 2
 #### 5. On average, how many unique sessions do we have per hour? 
 
 16.32 unique sessions per hour
-
+```
 select
   avg(session_count)
 from
@@ -93,3 +95,4 @@ from
     order by
       DATE_TRUNC (hour, created_at)
   )
+  ```
