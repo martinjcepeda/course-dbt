@@ -68,4 +68,19 @@ I found the organization to be challenging and thought to keep it simple by orga
 Most of my assumptions were around checking if the model had a null or incorrect number behavior (positive values). 
 
 #### Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
-I did run a test on created_at for users to check the data type and found that it wasn't a date or datetime. I amended after seeing the test fail. 
+I did run a test on created_at for users to check the data type and found that it wasn't a date or datetime. I amended the query to change the data type after seeing the test fail. 
+
+#### Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+
+You could test freshness to see if sources are up-to-date and concurrently run the data tests. 
+
+#### Run the product snapshot model using dbt snapshot and query it in snowflake to see how the data has changed since last week. Which products had their inventory change from week 1 to week 2? 
+```
+select * from DEV_DB.DBT_MCEPEDAINSTAWORKCOM.INVENTORY_SNAPSHOT
+where DBT_VALID_TO IS NOT NULL
+```
+Products that changed: 
+Pothos
+Philodendron
+Monstera
+String of pearls
