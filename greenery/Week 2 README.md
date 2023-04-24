@@ -51,7 +51,7 @@ Possible indicators that a user will not purchase again:
 I would also be interested in doing an EDA on demographic data covering gender, location, income, and other attributes. 
 
 #### Explain the product mart models you added. Why did you organize the models in the way you did?
-I only added one intermediate model - users, this was a simple join to get more user information in one place. I felt like the other staging models would require more complicated joins/transformations to have more value-add. I'd leave that to be a fact or dimension model. 
+I only added two intermediate models - users and orders. I felt like the other staging models would require more complicated joins/transformations to have more value-add. 
 
 ![image](https://user-images.githubusercontent.com/124597021/233874869-aa4b7a4d-d31f-4acb-8ab9-b9bb69e0a895.png)
 
