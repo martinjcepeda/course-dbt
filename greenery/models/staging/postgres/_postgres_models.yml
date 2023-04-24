@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns: 
+      - name: order_cost
+        tests: 
+          - positive_values
+          - dbt_expectations.expect_column_values_to_not_be_null
+      - name: shipping_cost
+        tests:
+          - positive_values
+      - name: order_total
+        tests:
+          - positive_values.
+          - dbt_expectations.expect_column_values_to_not_be_null
+  - name: stg_users
+    columns: 
+      - name: email
+        tests: 
+          - dbt_expectations.expect_column_values_to_not_be_null
+      - name: phone_number
+        tests: 
+          - dbt_expectations.expect_column_values_to_not_be_null
+  - name: int_users 
+    columns: 
+      - name: created_at
+        tests: 
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [date, datetime]
+    
+      
+
+

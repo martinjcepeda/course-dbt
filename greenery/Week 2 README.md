@@ -53,7 +53,7 @@ I would also be interested in doing an EDA on demographic data covering gender, 
 #### Explain the product mart models you added. Why did you organize the models in the way you did?
 I only added one intermediate model - users, this was a simple join to get more user information in one place. I felt like the other staging models would require more complicated joins/transformations to have more value-add. I'd leave that to be a fact or dimension model. 
 
-![image](https://user-images.githubusercontent.com/124597021/233871465-1e384489-3e21-47f8-86ac-8cc467a71232.png)
+image.png
 
 For my dimension models, I had two - orders and users. dim_orders showed a summary of the order information over time. dim_users built on top of the intermediate model and added order totals. 
 
@@ -65,5 +65,7 @@ Products: I summarized product revenue, count of orders each product was in, and
 I found the organization to be challenging and thought to keep it simple by organizing it this way. It was hard for me to visualize the correct DAG without understanding my business stakeholders and questions. I'd probably want to organize the directory in a cleaner fashion once I had a better understanding of stakeholders. 
 
 #### What assumptions are you making about each model? (i.e. why are you adding each test?)
+Most of my assumptions were around checking if the model had a null or incorrect number behavior (positive values). 
 
 #### Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+I did run a test on created_at for users to check the data type and found that it wasn't a date or datetime. I amended after seeing the test fail. 
