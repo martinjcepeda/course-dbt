@@ -53,7 +53,8 @@ I would also be interested in doing an EDA on demographic data covering gender, 
 #### Explain the product mart models you added. Why did you organize the models in the way you did?
 I only added one intermediate model - users, this was a simple join to get more user information in one place. I felt like the other staging models would require more complicated joins/transformations to have more value-add. I'd leave that to be a fact or dimension model. 
 
-image.png
+![image](https://user-images.githubusercontent.com/124597021/233874869-aa4b7a4d-d31f-4acb-8ab9-b9bb69e0a895.png)
+
 
 For my dimension models, I had two - orders and users. dim_orders showed a summary of the order information over time. dim_users built on top of the intermediate model and added order totals. 
 
