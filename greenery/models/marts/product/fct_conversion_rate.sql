@@ -31,4 +31,4 @@ select
   e.product_id, 
   COALESCE(name, o.name) as product_name
 FROM table_init e 
-LEFT JOIN {{ ref('int_orders') }} o on o.order_id = e.order_id
+LEFT JOIN {{ ref('int_orders') }} o on o.name = e.name
