@@ -33,3 +33,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   greenery:
+    +post-hook:
+      - "{{ grant(role='reporting') }}"
