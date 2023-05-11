@@ -28,6 +28,7 @@ t.created_at,
 t.event_type, 
 t.order_id, 
 t.product_id, 
-COALESCE(name, o.name) as product_name
+product_name
+-- COALESCE(name, o.name) as product_name
 FROM table_init t
-LEFT JOIN {{ ref('int_orders') }} o on o.product_id = t.order_id
+-- LEFT JOIN {{ ref('int_orders') }} o on o.product_id = t.order_id
