@@ -13,4 +13,7 @@ SELECT
   event_type, 
   order_id, 
   product_id
-FROM {{ ref('stg_events') }} u
+FROM {{ ref('stg_events') }} 
+
+
+
