@@ -4,7 +4,7 @@
 Total Sessions = 578 
 Checkout Sessions = 361 
 Conversion Rate = 0.624
-
+```
 with
   total_sessions as (
     select
@@ -35,7 +35,7 @@ select
 from
   total_sessions ts
   left join checkout_sessions cs on cs.session_id = ts.session_id
-
+```
 ##### Conversion Rate by Product 
 
 | Product Name        | Orders | Views | Conversion |
@@ -70,7 +70,7 @@ from
 | Bamboo              | 36     | 67    | 0.537313   |
 | Ponytail Palm       | 28     | 70    | 0.4        |
 | Ficus               | 29     | 68    | 0.426471   |
-
+```
 with
   total_sessions as (
     select
@@ -97,3 +97,4 @@ from
   left join product_orders po on po.product_name = ts.product_name
 group by
   1
+```
